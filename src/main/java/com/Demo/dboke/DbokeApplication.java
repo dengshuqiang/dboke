@@ -8,7 +8,7 @@ public class DbokeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DbokeApplication.class, args);
-	}
+	} 
 
 }
 
