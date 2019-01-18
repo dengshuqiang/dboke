@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>Document</title>
+  <title>首页</title>
   <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
 <!--加载meta IE兼容文件-->
@@ -38,8 +38,7 @@
       <li class="layui-nav-item"><a href="about.html">关于</a></li>
     </ul>
     <p class="welcome-text">
-      欢迎来到<span class="name">小明</span>的博客~
-    </p>
+      欢迎来到<span class="name"><span th:text="${loginUser.userName}"> </span>的博客~</p>
   </div>
 
   <div class="banner">

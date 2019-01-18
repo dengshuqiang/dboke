@@ -35,7 +35,7 @@ public class User implements Serializable {
         this.status = status;
     }
 
-    @Column(nullable=false)
+    @Column(nullable=true)
     private String status;
 
 
@@ -43,12 +43,13 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String userName, String passWord, String email, String nickName, String regTime) {
+    public User(String userName, String passWord, String email, String nickName, String regTime,String status) {
         this.userName = userName;
         this.passWord = passWord;
         this.email = email;
         this.nickName = nickName;
         this.regTime = regTime;
+        this.status = status;
     }
 
     public Long getId() {

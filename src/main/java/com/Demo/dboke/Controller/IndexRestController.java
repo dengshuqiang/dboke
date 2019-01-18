@@ -11,6 +11,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 @RestController
+@RequestMapping("/post")
 public class IndexRestController {
     @Autowired
     private UserRepository userRepository;
@@ -21,13 +22,13 @@ public class IndexRestController {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
         String formattedDate = dateFormat.format(date);
 
-        userRepository.delete(userRepository.findByUserName("aa1"));
-        userRepository.delete(userRepository.findByUserName("bb2"));
-        userRepository.delete(userRepository.findByUserName("cc3"));
+        //userRepository.delete(userRepository.findByUserName("aa1"));
+        //userRepository.delete(userRepository.findByUserName("bb2"));
+        //userRepository.delete(userRepository.findByUserName("cc3"));
 
-        userRepository.save(new User("aa1", "aa@126.com", "aa", "aa123456",formattedDate));
-        userRepository.save(new User("bb2", "bb@126.com", "bb", "bb123456",formattedDate));
-        userRepository.save(new User("cc3", "cc@126.com", "cc", "cc123456",formattedDate));
+        //userRepository.save(new User("aa1", "aa@126.com", "aa", "aa123456",formattedDate));
+        //userRepository.save(new User("bb2", "bb@126.com", "bb", "bb123456",formattedDate));
+        userRepository.save(new User("admin", "admin", "cc", "admin",formattedDate,"1"));
 
         //Assert.assertEquals(9, userRepository.findAll().size());
         //Assert.assertEquals("bb", userRepository.findByUserNameOrEmail("bb", "cc@126.com").getNickName());
